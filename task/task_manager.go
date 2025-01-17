@@ -6,12 +6,8 @@ import (
 )
 
 type TaskManager struct {
-	fileManager FileManager
-	Path        string
-	Tasks       []Task
-}
-
-type FileManager interface {
+	Path  string
+	Tasks []Task
 }
 
 func (tm TaskManager) CreateTask(title, description, assignee string, dueDate time.Time) (*Task, error) {
